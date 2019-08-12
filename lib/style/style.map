@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"sass/style.scss"
+	],
+	"sourcesContent": [
+		"\r\nbody {\r\n    background: #FEFEFE;\r\n    color: #00F;\r\n\r\n    section {\r\n        border: 1px solid grey;\r\n    }\r\n}\r\n\r\n.header__photo {\r\n    width: 100%;\r\n}"
+	],
+	"names": [],
+	"mappings": ";AACA,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,OAAO;EACnB,KAAK,EAAE,IAAI;CAKd;;;AAPD,AAII,IAJA,CAIA,OAAO,CAAC;EACJ,MAAM,EAAE,cAAc;CACzB;;;AAGL,AAAA,cAAc,CAAC;EACX,KAAK,EAAE,IAAI;CACd"
+}
