@@ -1,0 +1,10 @@
+body {
+  background: #FEFEFE;
+  color: #00F; }
+  body section {
+    border: 1px solid grey; }
+
+.header__photo {
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
