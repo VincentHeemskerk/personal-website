@@ -8,6 +8,77 @@ body {
     }
 }
 
+.nav {
+    height: 100px;
+    background-color: blue;
+    color: red;
+
+    .nav-item {
+        color: green;
+    }
+}
+
 .header__photo {
     width: 100%;
+}
+
+.photoalbum__photos {
+    max-width: 800px;
+    max-height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "topleft topmiddleleft topmiddleright topright"
+                        "lefttop large large righttop"
+                        "leftbottom large large rightbottom"
+                        "bottomleft bottommiddleleft bottommiddleright bottomright";
+    background-color: black;
+    grid-gap: 10px;
+}
+.topleft {
+    grid-area: topleft;
+}
+.topmiddleleft {
+    grid-area: topmiddleleft;
+}
+.topmiddleright {
+    grid-area: topmiddleright;
+}
+.topright {
+    grid-area: topright;
+}
+.lefttop {
+    grid-area: lefttop;
+}
+.large {
+    grid-area: large;
+}
+.righttop {
+    grid-area: righttop;
+}
+.leftbottom {
+    grid-area: leftbottom;
+}
+.rightbottom {
+    grid-area: rightbottom;
+}
+.bottomleft {
+    grid-area: bottomleft;
+}
+.bottommiddleleft {
+    grid-area: bottommiddleleft;
+}
+.bottommiddleright {
+    grid-area: bottommiddleright;
+}
+.bottomright {
+    grid-area: bottomright;
+}
+
+.photoalbum__photos__photo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
 }
