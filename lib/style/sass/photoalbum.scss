@@ -21,7 +21,16 @@ body {
 .header__photo {
     width: 100%;
 }
-
+.header__image {
+    background-color: paleturquoise;
+    min-height: 150px;
+    text-align: center;
+}
+.header__image__text {
+    display: inline-block;
+    font-style: italic;
+    font-size: 3rem;
+}
 .photoalbum__photos {
     max-width: 830px;
     max-height: 830px;
