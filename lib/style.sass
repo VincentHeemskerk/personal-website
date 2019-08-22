@@ -1,0 +1,45 @@
+body
+    font-family: "Verdana"
+
+h1
+    font-size: 70px
+
+nav
+    display: flex
+    justify-content: center
+    & ul
+        display: flex
+        list-style: none
+        & li
+            flex-grow: 1
+            flex-shrink: 1
+            flex-basis: auto
+            text-align: center
+            padding: 2rem 3rem
+            background-color: #ccc
+            border-bottom: 5px solid #011F01
+            &.selected
+                background-color: #0c460c
+                color: #FFFFFF
+            &:hover
+                background-color: #459245
+                border-bottom: 5px solid #0C460C
+                font-weight: bold
+    & a
+        color: white
+        text-decoration: none
+
+
+img
+   height: 100%
+   width: 100%
+
+
+/* begin footer */
+footer
+    background-color: #0C460C
+    color: #FFFFFF
+    text-transform: uppercase
+    font-weight: bold
+    padding: 3rem
+/* end footer */
