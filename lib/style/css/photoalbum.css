@@ -1,6 +1,6 @@
 body {
   background: #FEFEFE;
-  color: #00F; }
+  color: #333; }
   body section {
     border: 1px solid grey; }
 
@@ -15,18 +15,23 @@ body {
   width: 100%; }
 
 .header__image {
-  background-color: paleturquoise;
+  background-color: #D6FCA0;
+  background-color: rgba(214, 252, 160, 0.5);
   min-height: 150px;
   text-align: center; }
 
 .header__image__text {
   display: inline-block;
   font-style: italic;
-  font-size: 3rem; }
+  font-size: 3rem;
+  color: #150FBC;
+ }
 
 .photoalbum__photos {
   max-width: 830px;
   max-height: 830px;
+  width: 830px;
+  height: 830px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
