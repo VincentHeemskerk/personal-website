@@ -2,22 +2,30 @@
 body {
     background: #FEFEFE;
     color: #121212;
+    margin: 0;
 
     section {
-        border: 1px solid grey;
+        // border: 1px solid grey;
     }
 }
 .content-wrapper {
-    display: grid;
-    grid-template-columns: 80vw, 20vw;
-    grid-template-rows: 200px, 20vh, 1fr, 200px;
-    grid-template-areas: "navigation logo"
-                        "header header"
-                        "content content"
-                        "footer footer";
+    // display: grid;
+    // grid-template-columns: 80vw, 20vw;
+    // grid-template-columns: 800px, 200px;
+    // grid-template-rows: 200px, 20vh, 1fr, 200px;
+    // grid-template-rows: 200px, 200px, 500px, 200px;
+    // grid-template-areas: "navigation logo"
+    //                     "header header"
+    //                     "content content"
+    //                     "footer footer";
+}
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 80px;
 }
 .nav-list {
-    grid-area: navigation;
     height: 100px;
     display: flex;
     flex-direction: row;
@@ -39,14 +47,19 @@ body {
 }
 
 .logo {
-    grid-area: logo;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
 }
-.header__photo {
+
+.header__image {
     grid-area: header;
     width: 100%;
-}
-.header__image {
-    background-color: paleturquoise;
+    background-image:
+    linear-gradient(
+        to right,
+        yellow 10%, orange
+    );
     min-height: 150px;
     text-align: center;
 }
@@ -55,12 +68,14 @@ body {
     font-style: italic;
     font-size: 3rem;
 }
-.photoalbum__photos {
+main {
     grid-area: content; 
+}
+.photoalbum__photos {
     max-width: 100%;
     max-height: 100%;
-    // margin-left: auto;
-    // margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(25vw, 300px));
     grid-template-rows: repeat(4, minmax(25vw, 300px));
@@ -68,8 +83,9 @@ body {
                         "lefttop large large righttop"
                         "leftbottom large large rightbottom"
                         "bottomleft bottommiddleleft bottommiddleright bottomright";
-    // background-color: black;
+    background-color: black;
     // grid-gap: 10px;
+    overflow: hidden;
 }
 .topleft {
     grid-area: topleft;
