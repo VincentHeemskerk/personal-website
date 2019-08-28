@@ -1,48 +1,51 @@
+/**
+* name: photoalbum
+* 
+*/
+
+/** variable **/
+$light: yellow;
+$dark: orange;
+$background-footer: #005;
+$font-color: #121212;
+$navlistitem-color: #454545;
 
 body {
     background: #FEFEFE;
-    color: #121212;
+    color: $font-color;
     margin: 0;
+}
 
-    section {
-        // border: 1px solid grey;
-    }
-}
-.content-wrapper {
-    // display: grid;
-    // grid-template-columns: 80vw, 20vw;
-    // grid-template-columns: 800px, 200px;
-    // grid-template-rows: 200px, 20vh, 1fr, 200px;
-    // grid-template-rows: 200px, 200px, 500px, 200px;
-    // grid-template-areas: "navigation logo"
-    //                     "header header"
-    //                     "content content"
-    //                     "footer footer";
-}
 .nav-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-height: 80px;
-}
-.nav-list {
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-
-    .nav-list__item {
-        color: #454545;
-        padding: 12px;
-        font-weight: 900;
-
-        a {
-            text-decoration: none;
-
-            &:hover {
-                font-style: italic;
+    
+    nav {
+        .nav-list {
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+        
+            .nav-list__item {
+                color: $navlistitem-color;
+                padding: 12px;
+                font-weight: 900;
+        
+                a {
+                    text-decoration: none;
+        
+                    &:hover {
+                        font-style: italic;
+                    }
+                }
             }
         }
+    }
+    .logo {
+        padding: 16px;
     }
 }
 
@@ -58,7 +61,7 @@ body {
     background-image:
     linear-gradient(
         to right,
-        yellow 10%, orange
+        $light 10%, $dark
     );
     min-height: 150px;
     text-align: center;
@@ -71,69 +74,46 @@ body {
 main {
     grid-area: content; 
 }
-.photoalbum__photos {
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(25vw, 300px));
-    grid-template-rows: repeat(4, minmax(25vw, 300px));
-    grid-template-areas: "topleft topmiddleleft topmiddleright topright"
-                        "lefttop large large righttop"
-                        "leftbottom large large rightbottom"
-                        "bottomleft bottommiddleleft bottommiddleright bottomright";
-    background-color: black;
-    // grid-gap: 10px;
-    overflow: hidden;
-}
-.topleft {
-    grid-area: topleft;
-}
-.topmiddleleft {
-    grid-area: topmiddleleft;
-}
-.topmiddleright {
-    grid-area: topmiddleright;
-}
-.topright {
-    grid-area: topright;
-}
-.lefttop {
-    grid-area: lefttop;
-}
-.large {
-    grid-area: large;
-}
-.righttop {
-    grid-area: righttop;
-}
-.leftbottom {
-    grid-area: leftbottom;
-}
-.rightbottom {
-    grid-area: rightbottom;
-}
-.bottomleft {
-    grid-area: bottomleft;
-}
-.bottommiddleleft {
-    grid-area: bottommiddleleft;
-}
-.bottommiddleright {
-    grid-area: bottommiddleright;
-}
-.bottomright {
-    grid-area: bottomright;
+.photoalbum-wrapper {
+    width: 100%;
+    .photoalbum__photos {
+        width: 60%;
+        max-height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(15vw, 300px));
+        grid-template-rows: repeat(4, minmax(15vw, 300px));
+        grid-template-areas: "topleft topmiddleleft topmiddleright topright"
+                            "lefttop large large righttop"
+                            "leftbottom large large rightbottom"
+                            "bottomleft bottommiddleleft bottommiddleright bottomright";
+        grid-auto-flow: row;
+        background-color: transparent;
+        overflow: hidden;
+        
+        .photoalbum__photos__photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            &.large {
+                grid-area: large;
+            }
+        }
+    }
 }
 
-.photoalbum__photos__photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 
 footer {
     grid-area: footer;
-    background-color: blue;
+    background-color: $background-footer;
+    min-height: 80px;
+    margin-top: 20px;
+    padding: 20px;
+
+    .footer__text {
+        color: #FFF;
+    }
 }

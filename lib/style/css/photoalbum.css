@@ -1,3 +1,8 @@
+/**
+* name: photoalbum
+* 
+*/
+/** variable **/
 body {
   background: #FEFEFE;
   color: #121212;
@@ -8,20 +13,21 @@ body {
   flex-direction: row;
   justify-content: space-between;
   max-height: 80px; }
-
-.nav-list {
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  list-style-type: none; }
-  .nav-list .nav-list__item {
-    color: #454545;
-    padding: 12px;
-    font-weight: 900; }
-    .nav-list .nav-list__item a {
-      text-decoration: none; }
-      .nav-list .nav-list__item a:hover {
-        font-style: italic; }
+  .nav-wrapper nav .nav-list {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none; }
+    .nav-wrapper nav .nav-list .nav-list__item {
+      color: #454545;
+      padding: 12px;
+      font-weight: 900; }
+      .nav-wrapper nav .nav-list .nav-list__item a {
+        text-decoration: none; }
+        .nav-wrapper nav .nav-list .nav-list__item a:hover {
+          font-style: italic; }
+  .nav-wrapper .logo {
+    padding: 16px; }
 
 .logo {
   max-height: 100%;
@@ -43,64 +49,34 @@ body {
 main {
   grid-area: content; }
 
-.photoalbum__photos {
-  max-width: 100%;
-  max-height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25vw, 300px));
-  grid-template-rows: repeat(4, minmax(25vw, 300px));
-  grid-template-areas: "topleft topmiddleleft topmiddleright topright" "lefttop large large righttop" "leftbottom large large rightbottom" "bottomleft bottommiddleleft bottommiddleright bottomright";
-  background-color: black;
-  overflow: hidden; }
-
-.topleft {
-  grid-area: topleft; }
-
-.topmiddleleft {
-  grid-area: topmiddleleft; }
-
-.topmiddleright {
-  grid-area: topmiddleright; }
-
-.topright {
-  grid-area: topright; }
-
-.lefttop {
-  grid-area: lefttop; }
-
-.large {
-  grid-area: large; }
-
-.righttop {
-  grid-area: righttop; }
-
-.leftbottom {
-  grid-area: leftbottom; }
-
-.rightbottom {
-  grid-area: rightbottom; }
-
-.bottomleft {
-  grid-area: bottomleft; }
-
-.bottommiddleleft {
-  grid-area: bottommiddleleft; }
-
-.bottommiddleright {
-  grid-area: bottommiddleright; }
-
-.bottomright {
-  grid-area: bottomright; }
-
-.photoalbum__photos__photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
+.photoalbum-wrapper {
+  width: 100%; }
+  .photoalbum-wrapper .photoalbum__photos {
+    width: 60%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(15vw, 300px));
+    grid-template-rows: repeat(4, minmax(15vw, 300px));
+    grid-template-areas: "topleft topmiddleleft topmiddleright topright" "lefttop large large righttop" "leftbottom large large rightbottom" "bottomleft bottommiddleleft bottommiddleright bottomright";
+    grid-auto-flow: row;
+    background-color: transparent;
+    overflow: hidden; }
+    .photoalbum-wrapper .photoalbum__photos .photoalbum__photos__photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+      .photoalbum-wrapper .photoalbum__photos .photoalbum__photos__photo.large {
+        grid-area: large; }
 
 footer {
   grid-area: footer;
-  background-color: blue; }
+  background-color: #005;
+  min-height: 80px;
+  margin-top: 20px;
+  padding: 20px; }
+  footer .footer__text {
+    color: #FFF; }
 
 /*# sourceMappingURL=photoalbum.css.map */
